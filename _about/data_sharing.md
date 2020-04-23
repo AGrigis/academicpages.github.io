@@ -13,7 +13,7 @@ code: https://github.com/neurospin/piws
     <a class="figure-item">
       <img src="{{'images/data_sharing.png' | relative_url}}" alt="">
       <div>
-        <h5 class="name">Architecture of the data sharing service (DSS) integrated in Apache with LDAP</h5>
+        <h5 class="name">Architecture of the data sharing service (DSS)</h5>
         <small>CubicWeb</small>
         <i class="fa fa-reddit-alien"></i>
       </div>
