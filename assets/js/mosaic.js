@@ -14,13 +14,13 @@ $( "article" ).each(function( index ) {
 
 var allImages = "";
 if (window.matchMedia("(max-width: 700px)").matches) {
-    var nb_images = 3;
+    var nb_display_images = 3;
 }
 else {
-    var nb_images = 20;
+    var nb_display_images = 20;
 }
 var refresh = 1000;
-var items = range(1, 117);
+var items = range(1, nb_images);
 
 
 $('#photos').append(
@@ -36,7 +36,7 @@ $(frame.contentWindow).resize(function() {
 });
 
 
-for (var i = 1; i <= nb_images; i++) {
+for (var i = 1; i <= nb_display_images; i++) {
   var random_i = items[Math.floor(Math.random() * items.length)]
   allImages += '<img id="im' + i + '" src="../images/gallery/' + random_i +
                '.jpg" style="object-fit: cover;">';
@@ -45,7 +45,7 @@ $('#photos').append(allImages);
 
 setInterval(function() {
   var timestamp = new Date().getTime(); 
-  var random_i = items[Math.floor(Math.random() * nb_images)]
+  var random_i = items[Math.floor(Math.random() * nb_display_images)]
   var el = document.getElementById("im" + random_i);
   var random_i = items[Math.floor(Math.random() * items.length)]
   var queryString = "?t=" + timestamp;

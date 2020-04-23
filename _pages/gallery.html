@@ -7,6 +7,15 @@ author_profile: false
 
 {% include base_path %}
 
+{% assign gallery_items = site.gallery %}
+{% for item in resume_sorted %}
+    {{item.count}}
+{% endfor %}
+
+<script>
+    var nb_images = {{gallery_items[0].nb_images}};
+    console.log(nb_images);
+</script>
 <link rel="stylesheet" type="text/css" href="../assets/css/mosaic.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <section id="photos"></section>
